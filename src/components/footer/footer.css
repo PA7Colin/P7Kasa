@@ -1,0 +1,21 @@
+.footer {
+    background-color:#000000;
+    margin-inline: -100px;
+    padding: 25px;
+    display: grid;
+    place-items: center;
+    min-height: 150px;
+}
+
+.footer__logo {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+.footer__text {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.footer img {
+    margin-top: 1rem;
+}

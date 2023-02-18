@@ -1,26 +1,15 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Logo from "../../assets/logo.png";
+import React from 'react'
 
+import imgBanner from "../../assets/banner.png";
 import "../banner/banner.css";
 
 function Banner() {
   return (
-    <header className="header">
-      <div>
-        <img src={Logo} alt="Logo Kasa" />
-      </div>
-      <nav className="navbar">
-        <Link id="home" to="/">
-          Accueil
-        </Link>
-
-        <Link id="about" to="/about">
-          A propos
-        </Link>
-      </nav>
-    </header>
-  );
+    <div className='banner'>
+        <img src={imgBanner} alt="banner" />
+        <h1 className='banner__title'>Chez vous, partout et ailleurs</h1>
+    </div>
+  )
 }
 
-export default Banner;
+export default Banner
