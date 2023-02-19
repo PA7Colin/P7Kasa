@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Appart() {
   return (
-    <Link className='housing' to='/housing'>
+    <Link className='housingLink' to='/housing'>
       <div className='appartCard'>
         <p className='appartCard__subtitle'>Titre de la location</p> 
       </div>

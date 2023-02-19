@@ -10,7 +10,7 @@
     padding: 2rem 0;
 }
 
-.housing {
+.housingLink {
     border-radius: 10px ; 
     background: $gradient ;
     flex-wrap: wrap ;
@@ -27,7 +27,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .housing {
+    .housingLink {
       width: auto;
       min-width: 90%;
       height: 220px;

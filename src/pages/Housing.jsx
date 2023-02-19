@@ -1,8 +1,18 @@
 import React from 'react'
 
+import Header from '../components/header/Header'
+import Footer from '../components/footer/Footer'
+import Gallery from '../components/gallery/Gallery'
+
+
+
 function Housing() {
   return (
-    <div>Housing</div>
+    <>
+    <Header />
+    <Gallery />
+    <Footer />
+    </>
   )
 }
 
