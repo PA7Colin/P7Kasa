@@ -1,7 +1,7 @@
 import React from 'react'
 
 import imgBanner from "../../assets/banner.png";
-import "../banner/banner.css";
+import "../banner/banner.scss";
 
 function Banner() {
   return (

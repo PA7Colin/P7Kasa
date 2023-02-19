@@ -1,3 +1,5 @@
+@use '../../scss/variables.scss' as * ;
+
 .header {
     display: flex;
     position: absolute;
@@ -10,7 +12,7 @@
 
 .navbar {
     
-    color: #ff6060;
+    color: $color-primary;
     text-decoration: none;
     margin-right: 200px;
 }
@@ -20,15 +22,15 @@
 }
 
 a {
-    color: #ff6060;
+    color: $color-primary;
     text-decoration: none;
     font-size: 24px;
+    &:hover {
+        text-decoration: underline;
+    }
    
 }
 
-a:hover {
-    text-decoration: underline;
-}
 
 
     

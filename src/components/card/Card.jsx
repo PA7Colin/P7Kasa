@@ -1,16 +1,17 @@
 import React from 'react'
 
-import "../card/card.css";
+import "../card/card.scss";
+import Appart from './Appart'
 
 function Card() {
   return (
     <article className='grid'>
-        <div className='appartCard'>Titre de la location</div>
-        <div className='appartCard'>Titre de la location</div>
-        <div className='appartCard'>Titre de la location</div>
-        <div className='appartCard'>Titre de la location</div>
-        <div className='appartCard'>Titre de la location</div>
-        <div className='appartCard'>Titre de la location</div>
+      <Appart />
+      <Appart />
+      <Appart />
+      <Appart />
+      <Appart />
+      <Appart />
     </article>
   )
 }

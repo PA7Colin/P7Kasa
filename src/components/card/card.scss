@@ -1,5 +1,6 @@
+@use '../../scss/variables.scss' as * ;
 .grid {
-    background-color: #f7f7f7 ;
+    background-color: $whitebackground ;
     min-height: 50vh;
     border-radius: 25px ;
     display: flex;
@@ -9,16 +10,24 @@
     padding: 2rem 0;
 }
 
-.appartCard {
-    border-radius: 10px;
-    background: linear-gradient(to top, #863535, #ff6060);
-    flex-wrap: wrap;
-    flex-basis: 25%;
+.housing {
+    border-radius: 10px ; 
+    background: $gradient ;
+    flex-wrap: wrap ;
+    flex-basis: 25% ;
+    display: flex;
     
 }
 
+.appartCard__subtitle {
+    text-decoration: none;
+    color: $whitebackground;
+    font-size: 16px;
+    margin-top: 250px;
+}
+
 @media screen and (max-width: 768px) {
-    .appartCard {
+    .housing {
       width: auto;
       min-width: 90%;
       height: 220px;
@@ -29,7 +38,7 @@
     }
 
     .grid {
-        background-color: white;
+        background-color: $whitebackground;
         padding: 0;
     }
 

@@ -1,9 +1,21 @@
+@use '../../scss/variables.scss' as *;
+
 .banner {
     display: grid;
     place-items: center;
     margin-top: 170px;
     align-items: center;
     margin-bottom: 3rem;
+    &__title {
+        position: absolute;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 48px;
+        color: $whitebackground;
+        opacity: 0.9;
+    }
+        
 }
 
 .banner img {
@@ -15,15 +27,5 @@
     object-fit: cover;
 }
 
-.banner__title {
-    position: absolute;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 500;
-    font-size: 48px;
-    color: white;
-    opacity: 0.9;
-}
-    
 
 
