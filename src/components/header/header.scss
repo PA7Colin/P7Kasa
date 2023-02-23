@@ -7,7 +7,16 @@
     margin-top: 40px;
     align-items: center;
     justify-content: space-between;
+    
 }
+@media screen and (max-width: 992px) {
+    .header {
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
+  
+
 
 .navbar {
     

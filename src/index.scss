@@ -1,12 +1,12 @@
 body {
   margin: auto;
   padding-inline: 100px;
-  font-family: 'Monserrat' , sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   body {
     padding-inline: 20px;
   }

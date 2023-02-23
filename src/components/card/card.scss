@@ -1,6 +1,6 @@
 @use '../../scss/variables.scss' as * ;
 .grid {
-    background-color: $whitebackground ;
+    background-color: $background ;
     min-height: 50vh;
     border-radius: 25px ;
     display: flex;
@@ -17,6 +17,10 @@
     flex-basis: 25% ;
     display: flex;
     
+}
+.appartCard {
+    display: flex;
+
 }
 
 .appartCard__subtitle {

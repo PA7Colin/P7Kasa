@@ -28,7 +28,7 @@
         margin-block: 0;
     }
     & h2 {
-        margin: 0 0 20px;
+        margin: 0 0 25px;
     }
 
     & h3 {
@@ -71,19 +71,89 @@
         background-color: #C4C4C4;
         border-radius: 50%;
     }
-
+    
+    
     &__ownerdetails {
         display: flex;
         gap: 0.5rem;
     }
     &__stars {
-        font-size: 35px;
+        font-size: 30px;
         .off {
             color: lightgray;
         }
     }
+    &__descriptionTag {
+        background-color: $color-primary;
+        color: $whitebackground;
+        margin-bottom: 0;
+        padding: 1rem;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 18px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & i {
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+    }
+    &__descriptionContent {
+        background-color: $shadow;
+        color: $color-primary;
+        margin-top: 0;
+        border-radius: 10px;
+        padding: 1rem;
+        position: relative;
+        top: -10px;
+        z-index: -1;
+        min-height: 140px;
+        vertical-align: middle;
+    }
+    
+    &__tagFlex {
+        display: flex;
+        gap: 5%;
+    }
+
+    @media screen and (max-width: 992px) {
+        &__owner {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 10px;
+        }
+        &__header {
+            flex-wrap: wrap;
+        }
+        &__stars {
+            font-size: 25px;
+        }
+        &__tagFlex {
+          flex-direction: column;
+        }
+      }
     
 }
+
+.description_container {
+    width: 80%;
+    margin: auto;
+}
+
+@media screen and (max-width: 768px) {
+    .description_container {
+        width: 100%;
+    }
+    
+}
+
 
 
        
