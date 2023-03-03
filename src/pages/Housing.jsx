@@ -2,7 +2,7 @@ import React from 'react'
 
 import Header from '../components/header/Header'
 import Footer from '../components/footer/Footer'
-import Gallery from '../components/gallery/Gallery'
+import HousingGallery from '../components/gallery/HousingGallery'
 
 
 
@@ -10,7 +10,7 @@ function Housing() {
   return (
     <>
     <Header />
-    <Gallery />
+    <HousingGallery />
     <Footer />
     </>
   )

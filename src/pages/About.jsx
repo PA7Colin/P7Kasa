@@ -11,15 +11,19 @@ function About() {
     <main>
       <Header />
       <AboutBanner />
-      <div className='description_container'>
-        <Description />
-        <Description />
-        <Description />
-        <Description />
-      </div>
-        <Footer />      
+      <section className='description_container'>
+        <div className='description__about'>
+          <Description />
+          <Description />
+          <Description />
+          <Description />
+        </div>
+      </section>
+      <Footer />      
     </main>
-  )
+)
 }
+
+
 
 export default About
