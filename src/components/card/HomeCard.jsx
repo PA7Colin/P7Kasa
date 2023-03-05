@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
 
 import "../card/card.scss";
-import AppartHome from './AppartHome'
+import Appart from './Appart'
 
 
 
-function Card() {
+function HomeCard() {
   const [apartments, setHousing] = useState([]);
   useEffect(appartApi, []);
   
@@ -21,12 +21,12 @@ function Card() {
 
       {apartments.map((apartment) => (
 
-        <AppartHome title={apartment.title} imageUrl={apartment.cover} id={apartment.id}/>
+        <Appart title={apartment.title} imageUrl={apartment.cover} id={apartment.id}/>
 
       ))}
 
     </article>
 )
 }
-export default Card
+export default HomeCard
 
