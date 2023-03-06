@@ -3,8 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 import '../gallery/gallery.scss'
 
-import Description from '../tag/Description'
-import Equipements from '../tag/Equipements'
+import Collapse from '../collapse/Collapse'
 import Carrousel from '../carrousel/Carrousel'
 import UserHeader from '../tag/UserHeader'
 
@@ -30,8 +29,8 @@ function HousingGallery() {
         <Carrousel imageUrl={flat.cover} />
         <UserHeader flat={flat} />
         <div className='housing__tagFlex'>
-            <Description description={flat.description} />
-            <Equipements equipments={flat.equipments} content={flat.equipments.map(eq => <li>{eq}</li>)} />
+            <Collapse title={'Description'} content={flat.description}  />
+            <Collapse title={'Equipements'} equipments={flat.equipments} content={flat.equipments.map(eq => <li>{eq}</li>)} />
         </div>
     </div>
 )

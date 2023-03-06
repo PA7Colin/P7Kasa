@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Description(props) {
+function Collapse(props) {
   //Collapse
   const [isContentVisible, setIsContentVisible] = useState(false);
   const showContent = () => {
@@ -10,12 +10,12 @@ function Description(props) {
   return (
 <div className='housing__description'>
     <p className='housing__descriptionTag'>
-        <span>Description</span>
+        <span>{props.title}</span>
         <i class="fas fa-chevron-up" onClick={showContent}></i>
     </p>
 
-    {isContentVisible && <p className='housing__descriptionContent'>{props.description}</p>}
+    {isContentVisible && <p className='housing__descriptionContent'>{props.content}</p>}
 </div>
 )}
-export default Description
+export default Collapse
     

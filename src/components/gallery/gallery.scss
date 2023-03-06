@@ -107,9 +107,11 @@
     }
     &__description {
         width: 50%;
+        overflow: hidden;
     }
     &__descriptionContent {
         background-color: $shadow;
+        min-height: 120px;
         color: $color-primary;
         margin-top: 0;
         border-radius: 10px;
@@ -163,6 +165,7 @@
 .description__about div {
     width: 100%;
     margin-bottom: 30px;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 768px) {
