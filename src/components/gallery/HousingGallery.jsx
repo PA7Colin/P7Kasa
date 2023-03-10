@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useLocation } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 
 import '../gallery/gallery.scss'
 
@@ -8,15 +8,23 @@ import Carrousel from '../carrousel/Carrousel'
 import UserHeader from '../tag/UserHeader'
 
 function HousingGallery() {
-    const location = useLocation();
+   
     const [flat, setFlat] = useState(null);
     useEffect(fetchAppartData);
     
+    const { id } = useParams();
+
+    
     function fetchAppartData() {
-        fetch('logements.json')
-        .then((res) => res.json())
+        fetch('../logements.json')
+        .then((res) => {
+            return res.json()
+        })
+           
+
         .then((flats) => {
-            const flat = flats.find(flat => flat.id === location.state.apartId);
+            const flat = flats.find(flat => flat.id === id );
+            console.log(flat);
             setFlat(flat)
             //setSelectedFlat a maintenant la valeur récupérer 
         })
@@ -26,11 +34,11 @@ function HousingGallery() {
         
   return (
     <div className='housing'>
-        <Carrousel imageUrl={flat.cover} />
+        <Carrousel pictures={flat.pictures} />
         <UserHeader flat={flat} />
         <div className='housing__tagFlex'>
             <Collapse title={'Description'} content={flat.description}  />
-            <Collapse title={'Equipements'} equipments={flat.equipments} content={flat.equipments.map(eq => <li>{eq}</li>)} />
+            <Collapse title={'Equipements'} equipments={flat.equipments} content={flat.equipments.map((eq, i) => <li key={i}>{eq}</li>)} />
         </div>
     </div>
 )

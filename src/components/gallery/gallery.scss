@@ -3,13 +3,64 @@
 
 .housing {
     color: $color-primary;
-    &__img  {
+    
+    &__container {
+        position: relative;
+        height: 35vh;
+        & img {
+            position: absolute;
+            margin-top: 25px;
+            width: 100%;
+            max-height: 415px;
+            object-fit: cover;
+            border-radius: 25px;
+            inset: 0;
+            opacity: 0;
+            transition: all ease-in-out 0.5s;
+            &.show {
+                opacity: 1;
+            }
+        }
+    }
+    &__carrousel {
+        position: relative;
+        .slide-counter {
+           color: $whitebackground;
+           position: absolute;
+           width: 100%;
+           bottom: 1.5rem;
+           text-align: center;
+       }
+    }    
+    .btn {
+        color: $whitebackground;
+        font-size: 45px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 5rem;
+        background-color: transparent;
+        cursor: pointer;
+        border-width: 0;
+        &.btn-next {
+            right: 0;
+        }
+        &.btn-previous {
+            left: 0;
+        }
+    }
+
+
+
+    /* &__img  {
+        position: absolute; //
+        opacity: 1; //
         margin-top: 25px;
         width: 100%;
         max-height: 415px;
         object-fit: cover;
         border-radius: 25px;
-    }
+    } */
 
     &__header {
         display: flex;
@@ -166,6 +217,9 @@
     width: 100%;
     margin-bottom: 30px;
     border-radius: 5px;
+    & > * {
+        border-radius: 5px;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -174,7 +228,6 @@
     }
     
 }
-
 
 
 
