@@ -10,6 +10,7 @@ import {about} from '../service/AboutData'
 
 function About() {
   return (
+    <>
     <main>
       <Header />
       <AboutBanner />
@@ -21,8 +22,9 @@ function About() {
           <Collapse title='Responsabilité' content={about.security} />
         </div>
       </section>
-      <Footer />      
     </main>
+    <Footer />      
+    </>
 )
 }
 

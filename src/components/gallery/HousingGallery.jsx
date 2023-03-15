@@ -3,7 +3,8 @@ import { useParams } from 'react-router-dom'
 
 import '../gallery/gallery.scss'
 
-
+import Header from '../../components/header/Header'
+import Footer from '../../components/footer/Footer'
 import Collapse from '../collapse/Collapse'
 import Carrousel from '../carrousel/Carrousel'
 import UserHeader from '../tag/UserHeader'
@@ -34,6 +35,9 @@ function HousingGallery() {
     if (flat == null) return <Error />
         
   return (
+    <>
+    <main>
+    <Header />
     <div className='housing'>
         <Carrousel pictures={flat.pictures} />
         <UserHeader flat={flat} />
@@ -42,6 +46,9 @@ function HousingGallery() {
             <Collapse title={'Equipements'} equipments={flat.equipments} content={flat.equipments.map((eq, i) => <li key={i}>{eq}</li>)} />
         </div>
     </div>
+    </main>
+    <Footer />
+    </>
 )
 }
 export default HousingGallery

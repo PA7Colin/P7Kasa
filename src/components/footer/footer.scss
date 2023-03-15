@@ -2,19 +2,18 @@
 
 footer {
     background-color: $footerbg;
-    margin-inline: -100px;
     padding: 25px;
     display: grid;
     place-items: center;
     min-height: 150px;
-    &__logo {
-        color: $whitebackground;
-        margin-bottom: 1.5rem;
-    }
-    &__text {
-        color: $whitebackground;
-        font-size: 1.5rem;
-    }
+}
+.footer__text {
+    color: $whitebackground;
+    font-size: 1.5rem;
+}
+.footer__logo {
+    color: $whitebackground;
+    margin-bottom: 1.5rem;
 }
 
 footer img {
