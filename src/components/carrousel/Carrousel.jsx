@@ -45,4 +45,4 @@ return (
 </div>
 )}
 
-export default Carrousel
+export default Carrousel 

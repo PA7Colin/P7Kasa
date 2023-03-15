@@ -7,11 +7,13 @@ function Collapse(props) {
     setIsContentVisible(!isContentVisible)
   }
 
+  const chevronClass = (isContentVisible ? "fa-sharp fa-solid fa-chevron-up" : "fa-sharp fa-solid fa-chevron-down") + " fas";
+
   return (
 <div className='housing__description'>
-    <p className='housing__descriptionTag'>
+    <p className='housing__descriptionTag' onClick={showContent}>
         <span>{props.title}</span>
-        <i className="fas fa-chevron-up" onClick={showContent}></i>
+        <i className={chevronClass} ></i>
     </p>
 
     {isContentVisible && <p className='housing__descriptionContent'>{props.content}</p>}

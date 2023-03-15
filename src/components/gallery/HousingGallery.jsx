@@ -3,19 +3,20 @@ import { useParams } from 'react-router-dom'
 
 import '../gallery/gallery.scss'
 
+
 import Collapse from '../collapse/Collapse'
 import Carrousel from '../carrousel/Carrousel'
 import UserHeader from '../tag/UserHeader'
+import Error from '../../pages/Error'
 
 function HousingGallery() {
    
     const [flat, setFlat] = useState(null);
-    useEffect(fetchAppartData);
-    
     const { id } = useParams();
-
+    useEffect(() => fetchAppartData(id),[id]);
     
-    function fetchAppartData() {
+    
+    function fetchAppartData(id) {
         fetch('../logements.json')
         .then((res) => {
             return res.json()
@@ -30,7 +31,7 @@ function HousingGallery() {
         })
         .catch(console.error);
     }
-    if (flat == null) return <div></div>
+    if (flat == null) return <Error />
         
   return (
     <div className='housing'>

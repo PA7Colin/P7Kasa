@@ -7,7 +7,13 @@ import Appart from './Appart'
 
 function HomeCard() {
   const [apartments, setHousing] = useState([]);
-  useEffect(appartApi, []);
+  useEffect(() => {
+    console.log('composant monter');
+    appartApi();
+    return () => {
+      console.log('composant démonter');
+    }
+  },[]);
   
   function appartApi() {
     fetch('logements.json')

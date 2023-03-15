@@ -6,3 +6,11 @@
     margin: auto;
     object-fit: cover;
 }
+
+@media screen and (max-width: 992px) {
+    
+    .aboutimg {
+        margin-bottom: 1rem !important;
+    }
+  }
+
