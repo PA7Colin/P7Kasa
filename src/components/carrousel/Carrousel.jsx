@@ -1,8 +1,5 @@
 import React, { useState } from 'react'
 
-
-
-
 function Carrousel(props) {
   const pictures = props.pictures;
   const [currentPicture, setCurrentPicture] = useState(0);

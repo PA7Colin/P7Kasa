@@ -9,8 +9,8 @@ import Header from '../components/header/Header'
 function Error() {
   return (
     <>
-    <Header />
     <main className='error'>
+    <Header />
       <h1>404</h1>
       <h2>Oops ! La page que vous avez demandez n'existe pas.</h2>
       <Link id="home" to='/'>Retournez sur la page d'accueil</Link>
